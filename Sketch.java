@@ -1,5 +1,10 @@
 import processing.core.PApplet;
 
+/*
+* Description: A program that draws patterns of squares in 8 different sections.
+* Author: Stephanie Tam
+*/
+
 public class Sketch extends PApplet {
 	
 	
@@ -93,6 +98,24 @@ public class Sketch extends PApplet {
    */
   public void draw_section2(){
 
+    int intX2 = 0;
+    int intY2 = 0;
+    for(int intRow2 = 0; intRow2 < 300; intRow2 += 10){
+      for(int intColumn2 = 0; intColumn2 < 300; intColumn2 += 10){
+        intX2 = 300 + 3 + intRow2;
+        intY2 = 300 + 3 + intColumn2;
+        if(intRow2 % 20 == 0){
+          fill(255);
+          noStroke();
+          rect(intX2, intY2, 5, 5);
+      }
+        else{
+          fill(0);
+          noStroke();
+          rect(intX2, intY2, 5, 5);
+        }
+      }
+    }
   }
 
   /**
