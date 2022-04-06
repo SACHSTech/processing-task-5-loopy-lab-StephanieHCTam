@@ -189,21 +189,20 @@ public class Sketch extends PApplet {
   }
 
   public void draw_section6(){
-    int intX5 = 0;
-    int intY5 = 0;
+    int intX6 = 0;
+    int intY6 = 0;
 
-    for(int intRow5 = 0; intRow5 < 300; intRow5 += 10){
-      for(int intColumn5 = intRow5; intColumn5 < 300; intColumn5 += 10){
-        intX5 = 300 + 3 + intRow5;  //Instead of zero, calculate the proper intX location using 'intRow'
-        intY5 = 3 + intColumn5; //Instead of zero, calculate the proper intY location using 'intColumn'
+    for(int intRow6 = 0; intRow6 < 300; intRow6 += 10){
+      for(int intColumn6 = intRow6; intColumn6 < 300; intColumn6 += 10){
+        intX6 = 300 + 3 + intRow6;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY6 = 3 + intColumn6; //Instead of zero, calculate the proper intY location using 'intColumn'
 
         fill(255);
         noStroke();
-        rect(intX5, intY5, 5, 5);
+        rect(intX6, intY6, 5, 5);
 
       }
     }
-
   }
 
   public void draw_section7(){
@@ -220,17 +219,21 @@ public class Sketch extends PApplet {
         rect(intX7, intY7, 5, 5);
       }
     }
-
-
   }
   
   public void draw_section8(){
+    int intX8 = 0;
+    int intY8 = 0;
 
+    for(int intRow8 = 0; intRow8 < 310; intRow8 += 10){
+      for(int intColumn8 = intRow8; intColumn8 > 0; intColumn8 -= 10){
+        intX8 = 900 + 3 + intRow8 - 10;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY8 = 3 + intColumn8 - 10; //Instead of zero, calculate the proper intY location using 'intColumn'
+
+        fill(255);
+        noStroke();
+        rect(intX8, intY8, 5, 5);
+      }
+    }
   }
-
-
-
-
-
-
 }
