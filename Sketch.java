@@ -79,10 +79,10 @@ public class Sketch extends PApplet {
     int intX = 0;
     int intY = 0;
 
-    for(int intRow = 0; intRow < 30; intRow++){
-      for(int intColumn = 0; intColumn < 30; intColumn++){
-        intX = 3 + 0;  //Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 300 + 3 + 0; //Instead of zero, calculate the proper intY location using 'intColumn'
+    for(int intRow = 0; intRow < 300; intRow += 10){
+      for(int intColumn = 0; intColumn < 300; intColumn += 10){
+        intX = 3 + intRow;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY = 300 + 3 + intColumn; //Instead of zero, calculate the proper intY location using 'intColumn'
 
         fill(255);
         noStroke();
@@ -123,7 +123,24 @@ public class Sketch extends PApplet {
    * Don't use multiple 'if' statements.
    */
   public void draw_section3(){
-
+    int intX3 = 0;
+    int intY3 = 0;
+    for(int intRow3 = 0; intRow3 < 300; intRow3 += 10){
+      for(int intColumn3 = 0; intColumn3 < 300; intColumn3 += 10){
+        intX3 = 600 + 3 + intRow3;
+        intY3 = 300 + 3 + intColumn3;
+        if(intColumn3 % 20 == 0){
+          fill(255);
+          noStroke();
+          rect(intX3, intY3, 5, 5);
+      }
+        else{
+          fill(0);
+          noStroke();
+          rect(intX3, intY3, 5, 5);
+        }
+      }
+    }
   }
 
   /**
