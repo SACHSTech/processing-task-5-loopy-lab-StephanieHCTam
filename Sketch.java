@@ -7,7 +7,6 @@ import processing.core.PApplet;
 
 public class Sketch extends PApplet {
 	
-	
   /**
    * Called once at the beginning of execution, put your size all in this method
    */
@@ -48,7 +47,6 @@ public class Sketch extends PApplet {
     draw_section7();
     draw_section8();
 
-    
   }
 
 
@@ -75,19 +73,20 @@ public class Sketch extends PApplet {
   /**
    * draws the bottom left section
    */
-  public void draw_section1(){
-    int intX = 0;
-    int intY = 0;
 
-    for(int intRow = 0; intRow < 300; intRow += 10){
-      for(int intColumn = 0; intColumn < 300; intColumn += 10){
-        intX = 3 + intRow;  //Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 300 + 3 + intColumn; //Instead of zero, calculate the proper intY location using 'intColumn'
+   // Section 1 (all white squares)
+  public void draw_section1(){
+    int intX1 = 0;
+    int intY1 = 0;
+
+    for(int intRow1 = 0; intRow1 < 300; intRow1 += 10){
+      for(int intColumn1 = 0; intColumn1 < 300; intColumn1 += 10){
+        intX1 = 3 + intRow1;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY1 = 300 + 3 + intColumn1; //Instead of zero, calculate the proper intY location using 'intColumn'
 
         fill(255);
         noStroke();
-        rect(intX, intY, 5, 5);
-
+        rect(intX1, intY1, 5, 5);
       }
     }
   }
@@ -96,8 +95,9 @@ public class Sketch extends PApplet {
    * Use the modulus operator and an if statement to select the color
    * Don't loop from 30 to 60 to shift everything over, just add 300 to x.
    */
-  public void draw_section2(){
 
+  // Section 2 (white & black squares alternate columns)
+  public void draw_section2(){
     int intX2 = 0;
     int intY2 = 0;
     for(int intRow2 = 0; intRow2 < 300; intRow2 += 10){
@@ -122,6 +122,7 @@ public class Sketch extends PApplet {
    * Use the modulus operator and an if/else statement to select the color.
    * Don't use multiple 'if' statements.
    */
+  // Section 3 (white & black squares alternate rows)
   public void draw_section3(){
     int intX3 = 0;
     int intY3 = 0;
@@ -146,6 +147,7 @@ public class Sketch extends PApplet {
   /**
    * Use the modulus operator and just one 'if' statement to select the color.
    */
+  // Section 4 (white & black patterned squares)
   public void draw_section4(){
     int intX4 = 0;
     int intY4 = 0;
@@ -171,6 +173,7 @@ public class Sketch extends PApplet {
   /**
    * Do NOT use 'if' statements to complete 5-8. Manipulate the loops instead
    */
+  // Section 5 (white triangle patterned squares)
   public void draw_section5(){
     int intX5 = 0;
     int intY5 = 0;
@@ -188,6 +191,7 @@ public class Sketch extends PApplet {
     }
   }
 
+  // Section 6 (white triangle patterned squares)
   public void draw_section6(){
     int intX6 = 0;
     int intY6 = 0;
@@ -205,6 +209,7 @@ public class Sketch extends PApplet {
     }
   }
 
+  // Section 7 (white triangle patterned squares)
   public void draw_section7(){
     int intX7 = 0;
     int intY7 = 0;
@@ -221,6 +226,7 @@ public class Sketch extends PApplet {
     }
   }
   
+  // Section 8 (white triangle patterned squares)
   public void draw_section8(){
     int intX8 = 0;
     int intY8 = 0;
